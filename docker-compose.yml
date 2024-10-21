@@ -304,10 +304,11 @@ services:
       - ./mnt/nifi/logs:/opt/nifi/nifi-current/logs
     restart: on-failure  # Restart the container if it fails
     depends_on:
-      - nifi-zookeeper
-## Add Apache Atlas Service for metadata management and governance 
+      - nifi-zookeeper     
+           
+## Add Apache Atlas for metadata management and governance 
 
- atlas:
+  atlas:
     image: sburn/apache-atlas
     container_name: atlas 
   
